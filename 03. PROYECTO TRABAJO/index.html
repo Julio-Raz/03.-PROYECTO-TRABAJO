@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte</title>
+    <link rel="stylesheet" href="02. CSS/styles.css">
+    <link rel="icon" href="04. IMAGENES/icono.jpg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="page"> <!-- PÁGINA 1 -->
+        <div class="encabezado">
+            <img src="04. IMAGENES/B LOGO 1.png" alt="Logo" class="logo">
+            <h1 class="ReqTec">TENSIÓN</h1>
+        </div>
+        <div class="fecha"></div>
+        <p>En Estado Operativo Normal, los Centros de Carga deberán seguir conectados ante variaciones de tensión de manera permanente y de acuerdo con los rangos de la Tabla 2.1.A.</p>
+        <table class="tension">
+            <thead>
+                <tr>
+                    <th>Tensión nominal [kV]</th>
+                    <th>Tensión máxima [kV]</th>
+                    <th>Tensión mínima [kV]</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>34.5</td>
+                    <td>36.225</td>
+                    <td>32.775</td>
+                </tr>
+                <tr>
+                    <td>13.8</td>
+                    <td>14.49</td>
+                    <td>13.11</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="TABnombre">Tabla 2.1.A. Valores máximos y mínimos de tensión entre fases que deben soportar los Centros de Carga de manera permanente.</td>
+                </tr>
+            </tfoot>
+        </table>
+        <p>En condiciones distintas al Estado Operativo Normal, los Centros de Carga deberán seguir conectados ante variaciones de tensión de manera temporal hasta por 20 minutos de acuerdo con los valores de la Tabla 2.1.B. De no ser técnicamente factible deberá justificarlo.</p>
+        <table class="tension">
+            <thead>
+                <tr>
+                    <th>Tensión nominal [kV]</th>
+                    <th>Tensión máxima [kV]</th>
+                    <th>Tensión mínima [kV]</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>34.5</td>
+                    <td>37.95</td>
+                    <td>31.05</td>
+                </tr>
+                <tr>
+                    <td>13.8</td>
+                    <td>15.18</td>
+                    <td>12.42</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="TABnombre">Tabla 2.1.B. Valores máximos y mínimos de tensión entre fases que deben soportar los Centros de Carga hasta por 20 minutos.</td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="spacer"></div> <!-- Espaciador -->
+        <footer>
+            <div>www.julio iracheta . com</div>
+            <div>Pag. 1</div>
+        </footer>
+    </div>
+
+    <div class="page"> <!-- PÁGINA 2 -->
+        <div class="encabezado">
+            <img src="04. IMAGENES/B LOGO 1.png" alt="Logo" class="logo">
+            <h1 class="ReqTec">FRECUENCIA</h1>
+        </div>
+        <div class="fecha"></div>
+        <p>El Centro de Carga deberá ser capaz de soportar variaciones de frecuencia y permanecer conectados, de acuerdo con los rangos establecidos en la Tabla 2.2.A.</p>
+        <table class="frecuencia">
+            <thead>
+                <tr>
+                    <th>Tiempo</th>
+                    <th>Frecuencia máxima [Hz]</th>
+                    <th>Frecuencia mínima [Hz]</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Permanente</td>
+                    <td>61.0</td>
+                    <td>59.0</td>
+                </tr>
+                <tr>
+                    <td>30 minutos</td>
+                    <td>62.5</td>
+                    <td>58.0</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="TABnombre">Tabla 2.2.A. Valores de frecuencia máxima y mínima que debe soportar el Centro de Carga. </td>
+                </tr>
+            </tfoot>
+        </table>
+        <p>La infraestructura requerida para los Centros de Carga en proceso de Conexión o Modificación Técnica deberá tener en consideración que la conexión, desconexión o variación de carga no deberá causar desviaciones de frecuencia mayores a 0.1 Hz en los Sistemas Interconectados que componen el SEN. Durante la realización de los Estudios de Conexión el CENACE podrá definir la rampa máxima que podrá tener el Centro de Carga durante sus ciclos de operación para preservar la Confiabilidad del SEN.</p>
+        <div class="spacer"></div> <!-- Espaciador -->
+        <footer>
+            <div>www.julio iracheta . com</div>
+            <div>Pag. 1</div>
+        </footer>
+    </div>
+
+    <div class="page"> <!-- PÁGINA 3 -->
+        <div class="encabezado">
+            <img src="04. IMAGENES/B LOGO 1.png" alt="Logo" class="logo">
+            <h1 class="ReqTec">CORTO CIRCUITO</h1>
+        </div>
+        <div class="fecha"></div>
+        <p>Para dictaminar si el centro de carga cumple con el parámetro de corto circuito que se evalúa el Código de Red, se enlistan los siguientes incisos, aunque en el Código de Red se indican más puntos a considerar:</p>
+        <ol type="a" start="3">
+            <!--<li class="oculto">El CENACE deberá calcular e informar a los Centros de Carga a conectarse en Alta Tensión, la corriente máxima y mínima de corto circuito, trifásica y monofásica, en el Punto de Conexión.</li>
+            <li class="oculto">El Distribuidor deberá calcular e informar a los Centros de Carga a conectarse en Media Tensión, la corriente máxima y mínima de corto circuito, trifásica y monofásica, en el Punto de Conexión.</li> -->
+            <li>Los niveles de corto circuito proporcionados por el CENACE y por el Distribuidor se deben calcular tanto para dimensionar equipo eléctrico como para la coordinación de protecciones.</li>
+            <!--<li class="oculto">Los niveles de corto circuito se deberán entregar a todo Centro de Carga que se conecte a la RNT o a las RGD.</li>
+            <li class="oculto">El CENACE publicará de manera anual durante el último trimestre del año en curso, los niveles de corto circuito en los Puntos de Conexión para la red de Alta Tensión, con un horizonte de 3 años con base en el PRODESEN publicado por la SENER.</li>
+            <li class="oculto">El Distribuidor publicará los niveles de corto circuito de manera anual y a más tardar 60 días después de que el CENACE haya publicado los niveles de corto circuito en Alta Tensión. Los niveles de corto circuito que publique el Distribuidor deben comprender los Puntos de Conexión para la red de Media Tensión, con un horizonte de 3 años con base en el PRODESEN publicado por la SENER.</li> -->
+        </ol>
+        <ol type="a" start="7">
+            <li>La capacidad interruptiva y la capacidad de corto circuito de las protecciones de los Centros de Carga en el Punto de Conexión debe estar ajustada a los niveles de corto circuito correspondientes al inciso c de este numeral.</li>
+        </ol>
+        <div class="spacer"></div> <!-- Espaciador -->
+        <footer>
+            <div>www.julio iracheta . com</div>
+            <div>Pag. 1</div>
+        </footer>
+    </div>
+
+    <div class="page"> <!-- PÁGINA 4 -->
+        <div class="encabezado">
+            <img src="04. IMAGENES/B LOGO 1.png" alt="Logo" class="logo">
+            <h1 class="ReqTec">FACTOR DE POTENCIA</h1>
+        </div>
+        <div class="fecha"></div>
+        <p>A continuación se cita lo dicho por el Código de Red 2.0:</p>
+        <ol type="a">
+            <li>
+                <p>En Estado Operativo Normal, los Centros de Carga conectados en niveles de Media Tensión con una demanda contratada mayor o igual a 1 MW y los Centros de Carga conectados en niveles de Alta Tensión deberán mantener un factor de potencia entre 0.95 en atraso y 1.0 en el Punto de Conexión, con medición cinco-minutal conforme a la NOM-001-CRE/SCFI-2019 vigente o la que la sustituya. Dichos Centros de Carga deberán cumplir con este requerimiento al menos el 95% del tiempo durante un periodo mensual. La vigencia de este requerimiento permanecerá hasta el 8 de abril de 2026.</p>
+                <p>Posterior al periodo señalado en el párrafo anterior, el requerimiento del factor de potencia será de 0.97 en atraso y 1.0 en el Punto de Conexión, con medición cinco-minutal conforme a la NOM-001-CRE/SCFI-2019 vigente o la que la sustituya. Los Centros de Carga deberán cumplir con este requerimiento al menos el 95% del tiempo durante un periodo mensual.</p>
+            </li>
+        </ol>
+        <div class="spacer"></div> <!-- Espaciador -->
+        <footer>
+            <div>www.julio iracheta . com</div>
+            <div>Pag. 1</div>
+        </footer>
+    </div>
+
+    <div class="page"> <!-- PÁGINA 5 -->
+        <div class="encabezado">
+            <img src="04. IMAGENES/B LOGO 1.png" alt="Logo" class="logo">
+            <h1 class="ReqTec">CALIDAD DE LA POTENCIA</h1>
+        </div>
+        <div class="fecha"></div>
+        <h2>DISTORSIÓN ARMÓNICA TOTAL DE DEMANDA</h2>
+        <p>Los Centros de Carga deberán cumplir con los siguientes criterios:</p>
+        <ol type="a" start="4">
+            <li>
+                Los Centros de Carga no deben exceder los niveles de distorsión armónica de corriente establecidos en las Tablas 2.8.A, 2.8.B y 2.8.C; conforme a las siguientes especificaciones:
+                <ol type="i">
+                    <li>Los Centros de Carga deberán cumplir con los límites establecidos de acuerdo con el nivel de tensión al que se conectan y con el valor de la Impedancia Relativa o razón de corto circuito (Icc/IL) en el Punto de Conexión. Icc es la Corriente Máxima de Corto Circuito. IL es la Corriente Máxima de Carga (corriente de línea a frecuencia fundamental), la cual será el valor promedio para los 12 meses anteriores, de los valores de corriente máxima demandada por el Centro de Carga, registrados de manera mensual o bimestral, o en su defecto se podrá tomar como referencia la corriente nominal de las unidades de transformación del Centro de Carga.
+                    </li>
+                    <li>El valor a considerar para la evaluación de cada componente armónica individual (Ih) será el percentil 95 de los registros semanales (o 7 días naturales), de la medición de agregación de 10 minutos de conformidad con la NOM-001-CRE/SCFI-2019 vigente o la NMX-J-610-4-30- ANCE-2018 Clase A o IEC 61000-4-30 Clase A, expresado en porcentaje de IL.</li>
+                    <li>La Distorsión Armónica Total de Demanda, deberá calcularse para cada registro de la medición de agregación de 10 minutos, y deberá mantenerse por debajo de los límites indicados al menos el 95% del tiempo durante un periodo semanal, este valor se expresa en porcentaje y resulta de la aplicación de la siguiente fórmula:
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <img src="04. IMAGENES/DATD.PNG">
+        <table class="TDD">
+            <thead>
+                <tr>
+                    <th>Impedancia relativa o razón de corto circuito (I<sub>CC</sub>/I<sub>L</sub>)</th>
+                    <th colspan="5">Límites para componentes armónicas de orden (h) impar en porcentaje de I<sub>L</sub>(%)</th>
+                    <th>Distorsión Armónica Total de Demanda (%DATD)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>2 < h < 11 </td>
+                    <td>11 <= h < 17 </td>
+                    <td>17 <= h < 23</td>
+                    <td>23 <= h < 35</td>
+                    <td>35 <= h < 50</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>I<sub>CC</sub>/I<sub>L</sub> < 20 </td>
+                    <td>4.0</td>
+                    <td>2.0</td>
+                    <td>1.5</td>
+                    <td>0.6</td>
+                    <td>0.3</td>
+                    <td>5.0</td>
+                </tr>
+                <tr>
+                    <td>20 = I<sub>CC</sub>/I<sub>L</sub> < 50 </td>
+                    <td>7.0</td>
+                    <td>3.5</td>
+                    <td>2.5</td>
+                    <td>1.0</td>
+                    <td>0.5</td>
+                    <td>8.0</td>
+                </tr>
+                <tr>
+                    <td>50 = I<sub>CC</sub>/I<sub>L</sub> < 100 </td>
+                    <td>10.0</td>
+                    <td>4.5</td>
+                    <td>4.0</td>
+                    <td>1.5</td>
+                    <td>0.7</td>
+                    <td>12.0</td>
+                </tr>
+                <tr>
+                    <td>100 = I<sub>CC</sub>/I<sub>L</sub> < 1000 </td>
+                    <td>12.0</td>
+                    <td>5.5</td>
+                    <td>5.0</td>
+                    <td>2.0</td>
+                    <td>1.0</td>
+                    <td>15.0</td>
+                </tr>
+                <tr>
+                    <td>I<sub>CC</sub>/I<sub>L</sub> >= 1000 </td>
+                    <td>15.0</td>
+                    <td>7.0</td>
+                    <td>6.0</td>
+                    <td>2.5</td>
+                    <td>1.4</td>
+                    <td>20.0</td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <td colspan="7" class="TABnombre" id="TABtdd">Tabla 2.8.A. Límites de distorsión armónica máxima permisible en corriente para tensiones menores o iguales a 69 kV</td>
+                    </tr>
+                </tfoot>
+            </tbody>
+        </table>
+        <div class="spacer"></div> <!-- Espaciador -->
+        <footer>
+            <div>www.julio iracheta . com</div>
+            <div>Pag. 1</div>
+        </footer>
+    </div>
+
+    <div class="page"> <!-- PÁGINA 6 -->
+        <div class="encabezado">
+            <img src="04. IMAGENES/B LOGO 1.png" alt="Logo" class="logo">
+            <h1 class="ReqTec">CALIDAD DE LA POTENCIA</h1>
+        </div>
+        <div class="fecha"></div>
+        <h2>FLUCTUACIONES DE TENSIÓN (PARPADEO O FLIKER)</h2>
+        <ol type="a" start="5">
+            <li>
+                Fluctuaciones de tensión (parpadeo o flicker). La fluctuación de tensión, en los Puntos de Conexión de los Centros de Carga conectados en Media o Alta Tensión, debe limitarse de acuerdo con la Tabla 3.8.D.
+            </li>
+        </ol>
+        <table class="Flicker">
+            <thead>
+                <tr>
+                    <th>Indicador</th>
+                    <th>Límite</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PST</td>
+                    <td><= 1</td>
+                </tr>
+                <tr>
+                    <td>PLT</td>
+                    <td><= 0.8</td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" class="TABnombre">Tabla 3.8.D. Límites de fluctuaciones de tensión.</td>
+                    </tr>
+                </tfoot>
+            </tbody>
+        </table>
+        <p><strong>Nota 1.</strong> La fluctuación de tensión son oscilaciones en el nivel de tensión debidas, de manera enunciativa mas no limitativa, a la operación de cargas cíclicas o por oscilaciones interarmónicas.</p>
+        <p class="CabezaUL"><strong>Nota 2.</strong> Descripción de indicadores:</p>
+        <ul class="CabezaUL">
+            <li>Pst: Indicador de variación de tensión de corto plazo. Expresa la severidad de la fluctuación durante un período de 10 min, siendo Pst=1 el umbral de irritabilidad.</li>
+            <li>Plt: Indicador de variaciones de tensión de largo plazo. Expresa la severidad de la fluctuación durante un periodo largo de 2 horas, empleando valores sucesivos de Pst.</li>
+        </ul>
+        <div class="spacer"></div> <!-- Espaciador -->
+        <footer>
+            <div>www.julio iracheta . com</div>
+            <div>Pag. 1</div>
+        </footer>
+    </div>
+
+    <div class="page"> <!-- PÁGINA 7 -->
+        <div class="encabezado">
+            <img src="04. IMAGENES/B LOGO 1.png" alt="Logo" class="logo">
+            <h1 class="ReqTec">CALIDAD DE LA POTENCIA</h1>
+        </div>
+        <div class="fecha"></div>
+        <h2>DESBALANCE DE TENSIÓN</h2>
+        <p>El desbalance de tensión en sistemas trifásicos (V<sub>desb</sub>) es definido como la razón entre la magnitud de la componente de tensión de secuencia negativa (V<sub>2</sub>) y la magnitud de la componente de tensión de secuencia positiva (V<sub>1</sub>) expresada en porcentaje de acuerdo con la siguiente formulación.</p>
+        <img src="04. IMAGENES/Vdesb12.PNG">
+        <p>El desbalance de tensión en los Puntos de Conexión de los Centros de Carga conectados en Media o Alta Tensión debe limitarse a 2%, considerando el desbalance de secuencia negativa valor resultado de la agregación de 10 minutos de conformidad con la NOM-001-CRE/SCFI-2019 vigente o la NMX-J-610-4-30-ANCE-2018 Clase A o IEC 61000-4-30 Clase A. El percentil 95 de los registros de medición durante un periodo semanal (o 7 días naturales) no deberá exceder el límite establecido.</p>
+        <p>Para los Centros de Carga en Media Tensión con Demanda Contratada menor a 1 MW el desbalance de tensión podrá ser calculado, considerando los valores de la agregación de 10 minutos, como:</p>
+        <img src="04. IMAGENES/Vdesb.PNG">
+        <p>Donde: V<sub>AB</sub>, V<sub>BC</sub>, V<sub>CA</sub>: es el valor eficaz entre fases.</p>
+        <div class="spacer"></div> <!-- Espaciador -->
+        <footer>
+            <div>www.julio iracheta . com</div>
+            <div>Pag. 1</div>
+        </footer>
+    </div>
+
+    <div class="page"> <!-- PÁGINA 8 -->
+        <div class="encabezado">
+            <img src="04. IMAGENES/B LOGO 1.png" alt="Logo" class="logo">
+            <h1 class="ReqTec">CALIDAD DE LA POTENCIA</h1>
+        </div>
+        <div class="fecha"></div>
+        <h2>DESBALANCE DE CORRIENTE</h2>
+        <p>El desbalance de corriente en sistemas trifásicos (I<sub>desb</sub>) es definido como la razón entre la magnitud de la componente de corriente de secuencia negativa (I<sub>2</sub>) y la magnitud de la componente de corriente de secuencia positiva (I<sub>1</sub>) expresada en porcentaje de acuerdo con la siguiente formulación.</p>
+        <img src="04. IMAGENES/Idesb12.PNG">
+        <p>El desbalance de corriente en los Puntos de Conexión de los Centros de Carga conectados en Media o Alta Tensión debe limitarse a 15%, considerando el desbalance de secuencia negativa valor resultado de la agregación de 10 minutos de conformidad con la NOM-001-CRE/SCFI-2019 vigente o la NMX-J-610-4-30-ANCE-2018 Clase A o IEC 61000-4-30 Clase A. El valor promedio de los registros de medición durante un periodo semanal (o 7 días naturales) no deberá exceder el límite establecido.</p>
+        <p>Para los Centros de Carga en Media Tensión con Demanda Contratada menor a 1 MW el desbalance de corriente podrá ser calculado, considerando los valores de la agregación de 10 minutos, como:</p>
+        <img src="04. IMAGENES/Idesb.PNG">
+        <p>Donde: I<sub>A</sub>, I<sub>B</sub>, I<sub>C</sub>: es el valor eficaz entre fases.</p>
+        <div class="spacer"></div> <!-- Espaciador -->
+        <footer>
+            <div>www.julio iracheta . com</div>
+            <div>Pag. 1</div>
+        </footer>
+    </div>
+    
+    <button onclick="generatePDF()">Convertir a PDF</button>
+
+    <script src="04. JS/script.js"></script>
+    <script src="04. JS/fecha.js"></script>
+</body>
+</html>
